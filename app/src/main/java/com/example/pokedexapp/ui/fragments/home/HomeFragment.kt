@@ -1,4 +1,4 @@
-package com.example.pokedexapp.ui.home
+package com.example.pokedexapp.ui.fragments.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,10 +28,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+       // val textView: TextView = binding
+       // homeViewModel.text.observe(viewLifecycleOwner) {
+       //     textView.text = it
+       // }
         return root
     }
 

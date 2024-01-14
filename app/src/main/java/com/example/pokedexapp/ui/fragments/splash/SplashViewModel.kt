@@ -1,10 +1,10 @@
-package com.example.pokedexapp.ui.dashboard
+package com.example.pokedexapp.ui.fragments.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class SplashViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"

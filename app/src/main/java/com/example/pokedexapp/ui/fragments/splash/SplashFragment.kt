@@ -1,4 +1,4 @@
-package com.example.pokedexapp.ui.dashboard
+package com.example.pokedexapp.ui.fragments.splash
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.pokedexapp.databinding.FragmentDashboardBinding
+import androidx.navigation.fragment.findNavController
+import com.example.pokedexapp.R
+import com.example.pokedexapp.databinding.SplashFragmentBinding
 
-class DashboardFragment : Fragment() {
+class SplashFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: SplashFragmentBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,15 +25,15 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+            ViewModelProvider(this).get(SplashViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = SplashFragmentBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        textView.setOnClickListener {
+            findNavController().navigate(R.id.action_splash_fragment_to_navigation_home) }
+
         return root
     }
 
