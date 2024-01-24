@@ -10,27 +10,26 @@
         android:name="com.example.pokedexapp.ui.fragments.splash.SplashFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/splash_fragment" >
-
         <action
-            android:id="@+id/action_splash_fragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_splash_fragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.pokedexapp.ui.fragments.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_notifications"
-            app:destination="@id/navigation_notifications" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.pokedexapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.pokedexapp.ui.activities.HomeActivity"
+        android:label="HomeActivity" />
 
 
 </navigation>

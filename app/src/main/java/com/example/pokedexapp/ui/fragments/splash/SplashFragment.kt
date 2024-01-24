@@ -32,7 +32,7 @@ class SplashFragment : Fragment() {
 
         val textView: TextView = binding.textDashboard
         textView.setOnClickListener {
-            findNavController().navigate(R.id.action_splash_fragment_to_navigation_home) }
+            findNavController().navigate(R.id.action_splash_fragment_to_homeActivity) }
 
         return root
     }

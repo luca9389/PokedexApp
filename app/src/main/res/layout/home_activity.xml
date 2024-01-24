@@ -10,18 +10,30 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tapLayout"
+        android:background="@color/green_cream"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:tabMode="fixed"
-        app:tabIndicatorGravity="stretch"
-        app:tabIndicatorAnimationMode="elastic"
         app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorColor="@null"
         app:tabIndicator="@drawable/tab_indicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
